@@ -6,7 +6,7 @@ const propertyConfig = {
     keywords: "apartamento cedritos, terraza privada, venta apartamento bogotá, apartamento para estrenar, vecy bienes raices",
     ogUrl: "https://ap-nuevo-cedritos-bog.netlify.app/",
     propertyId: "UBIK-CEDRITOS",
-    ogImage: "assets/1.jpg",
+    ogImage: "assets/portada_video_fotos_redes_enlaces.png",
     author: "Vecy Bienes Raíces",
     copyright: "2026"
   },
@@ -83,7 +83,7 @@ const propertyConfig = {
   // 8. Multimedia
   multimedia: {
     videoUrl: "assets/Apartamento Nuevo en Venta en Cedritos - Bogotá.mp4",
-    videoThumbnail: "assets/1.jpg",
+    videoThumbnail: "assets/portada_video_fotos_redes_enlaces.png",
     imagesCount: 36,
     imagePrefix: "assets/",
     imageExtension: ".jpg",
