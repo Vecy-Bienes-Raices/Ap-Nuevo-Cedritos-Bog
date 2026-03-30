@@ -87,7 +87,10 @@ const propertyConfig = {
     imagesCount: 36,
     imagePrefix: "assets/",
     imageExtension: ".jpg",
-    imagesList: Array.from({ length: 36 }, (_, i) => `assets/${i + 1}.jpg`)
+    imagesList: [
+      "assets/portada_video_fotos_redes_enlaces.png",
+      ...Array.from({ length: 36 }, (_, i) => `assets/${i + 1}.jpg`)
+    ]
   },
 
   // 9. Botón Compartir
