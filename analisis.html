@@ -137,11 +137,11 @@
         
         <!-- P1: PORTADA -->
         <div class="page">
-            <div class="header-ref">REF: <span class="prop-id">CANTALEJO</span></div>
+            <div class="header-ref">REF: <span class="prop-id"></span></div>
             <div class="content-center">
                 <h1>FICHA TÉCNICA</h1>
-                <!-- Imagen Hero principal, por defecto photo 1 de Wix -->
-                <div class="hero-img" style="background-image: url('https://static.wixstatic.com/media/334454_2c67fc3930054a72a285fe8b2b00874e~mv2.png');"></div>
+                <!-- Imagen Hero: primera foto local del activo -->
+                <div class="hero-img" style="background-image: url('assets/1.jpg');"></div>
                 <div style="margin-top: 30px; text-align: center; font-size: 18px; color: #666; font-weight: 300; letter-spacing: 5px;">APARTAMENTO RESIDENCIAL - CEDRITOS NORTE</div>
             </div>
             <div class="footer-note">DOCUMENTO CONFIDENCIAL - MARCA BLANCA PARA ALIADOS</div>
@@ -179,7 +179,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2>3. Zonas Comunes y Externas</h2>
+                        <h2>3. Zonas Comunes</h2>
                         <ul class="spec-list" id="amenities-list" style="font-size: 12px;">
                             <!-- Inyectado desde config -->
                         </ul>
@@ -188,7 +188,7 @@
                 
                 <h2 style="margin-top: 40px;">Ubicación y Entorno Estratégico</h2>
                 <div class="data-card" style="border-left: 6px solid var(--gold);">
-                    <p id="location-text" style="font-size: 14px;"><!-- Inyectado --></p>
+                    <p id="location-text" style="font-size: 14px;"></p>
                 </div>
             </div>
             <div class="footer-note">PÁGINA 03 | <span class="prop-id"></span></div>
@@ -254,7 +254,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         document.querySelectorAll('.prop-id').forEach(el => el.innerText = propertyConfig.seo.propertyId);
-        document.getElementById('desc-text').innerHTML = propertyConfig.destacadoInterno || "Un espectacular inmueble en suba.";
+        document.getElementById('desc-text').innerHTML = propertyConfig.destacadoInterno || '';
         
         if(propertyConfig.destacadoUbicacion) {
              document.getElementById('location-text').innerHTML = propertyConfig.destacadoUbicacion;
@@ -284,6 +284,7 @@
                 extList.appendChild(li);
             });
         }
+
 
         const gBox1 = document.getElementById('gallery-box-1');
         const gBox2 = document.getElementById('gallery-box-2');
