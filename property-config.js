@@ -23,6 +23,7 @@ const propertyConfig = {
   // 3. Rejilla de Detalles
   detalles: [
     { label: "Área Const.", value: "151.70 m²", icon: "📐" },
+    { label: "Área Privada", value: "141.25 m²", icon: "🏠" },
     { label: "Terraza Privada", value: "84 m²", icon: "🌿" },
     { label: "Habitaciones", value: "3 (c/u baño)", icon: "🛏️" },
     { label: "Baños", value: "4", icon: "🚿" },
