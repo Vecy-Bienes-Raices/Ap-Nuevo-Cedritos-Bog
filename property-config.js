@@ -29,7 +29,7 @@ const propertyConfig = {
     { label: "Parqueadero", value: "2", icon: "🚗" },
     { label: "Antigüedad", value: "Para Estrenar", icon: "🏗️" },
     { label: "Estrato", value: "5", icon: "✨" },
-    { label: "Piso", value: "Alto", icon: "🏢" }
+    { label: "Piso", value: "5", icon: "🏢" }
   ],
 
   // 4. Características Internas
