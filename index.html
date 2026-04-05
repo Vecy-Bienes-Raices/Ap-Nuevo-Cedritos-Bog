@@ -790,12 +790,6 @@
       <video id="video-element" src="" controls playsinline preload="metadata">
         Tu navegador no soporta el tag de video.
       </video>
-      <div style="text-align: center; margin-top: 12px;">
-        <a id="video-download-btn" href="" download
-          style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(180deg,#FFD700 0%,#DAA520 100%); color:#3E2723; font-weight:900; font-size:14px; padding:10px 28px; border-radius:50px; text-decoration:none; box-shadow:0 4px 0 #B8860B, 0 8px 16px rgba(0,0,0,0.3); letter-spacing:1px; text-transform:uppercase;">
-          ⬇️ Descargar Video
-        </a>
-      </div>
     </div>
 
     <div class="section-title">📸 Fotos</div>
@@ -915,12 +909,6 @@
             videoEl.src = propertyConfig.multimedia.videoUrl;
             if (propertyConfig.multimedia.videoThumbnail) {
                 videoEl.poster = propertyConfig.multimedia.videoThumbnail;
-            }
-            // Botón de descarga del video
-            const videoDownloadBtn = document.getElementById("video-download-btn");
-            if (videoDownloadBtn) {
-                videoDownloadBtn.href = propertyConfig.multimedia.videoUrl;
-                videoDownloadBtn.download = "Apartamento-Nuevo-Cedritos-Bogota.mp4";
             }
         } else {
             if (titleRecorrido) titleRecorrido.style.display = 'none';
