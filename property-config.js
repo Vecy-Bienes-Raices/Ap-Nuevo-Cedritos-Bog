@@ -5,7 +5,7 @@ const propertyConfig = {
     description: "¡Oportunidad única! Apartamento para estrenar de 151.70 m² en Cedritos. 3 habitaciones con baño privado, espectacular terraza privada de 84 m² y amenidades tipo club.",
     keywords: "apartamento cedritos, terraza privada, venta apartamento bogotá, apartamento para estrenar, vecy bienes raices",
     ogUrl: "https://ap-nuevo-cedritos-bog.netlify.app/",
-    propertyId: "UBIK-CEDRITOS",
+    propertyId: "ID-BOG-CD02",
     ogImage: "assets/portada_video_fotos_redes_enlaces.png",
     author: "Vecy Bienes Raíces",
     copyright: "2026"
