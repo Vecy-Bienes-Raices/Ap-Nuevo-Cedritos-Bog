@@ -336,7 +336,8 @@
       .slider-container {
         position: relative;
         width: 100%;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 3;
+        background-color: rgba(0, 0, 0, 0.2);
         border-radius: 15px;
         margin-bottom: 10px;
         overflow: hidden;
@@ -692,22 +693,23 @@
         position: absolute;
         top: 20px;
         right: 60px;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(212, 175, 55, 0.85);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid #D4AF37;
         color: white;
         padding: 10px 20px;
         border-radius: 8px;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 700;
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
         gap: 8px;
         z-index: 1002;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       }
       .lightbox-download:hover {
-        background: rgba(255, 255, 255, 0.4);
+        background: #D4AF37;
         transform: translateY(-2px);
       }
 
@@ -750,14 +752,14 @@
       </div>
     </div>
 
-    <div class="section-title">🎥 Recorrido Virtual</div>
-    <div class="glass-card video-wrapper">
+    <div class="section-title" id="title-recorrido">🎥 Video</div>
+    <div class="glass-card video-wrapper" id="card-recorrido">
       <video id="video-element" src="" controls playsinline preload="metadata">
         Tu navegador no soporta el tag de video.
       </video>
     </div>
 
-    <div class="section-title">📸 Galería de Fotos</div>
+    <div class="section-title">📸 Fotos</div>
     <div class="glass-card gallery-section">
       <div class="slider-container">
         <button class="slider-arrow prev-arrow">❮</button>
@@ -768,14 +770,14 @@
       </div>
     </div>
 
-    <div class="section-title">🔎 Detalles del Apartamento</div>
+    <div class="section-title">🔎 Detalles</div>
     <div class="glass-card">
       <div id="specs-grid" class="specs-grid">
         <!-- Renderizado dinámico -->
       </div>
     </div>
 
-    <div class="section-title">🏡 Distribución del Apartamento</div>
+    <div class="section-title">🏡 Características Internas</div>
     <div class="glass-card">
       <div id="internas-list" class="amenities-list">
         <!-- Renderizado dinámico -->
@@ -797,7 +799,7 @@
       </div>
     </div>
 
-    <div class="section-title">🗺️ Ubicación en el Mapa</div>
+    <div class="section-title">🗺️ Ubicación</div>
     <div class="glass-card map-container">
       <iframe
         id="map-iframe"
@@ -863,12 +865,17 @@
         }
 
         // --- Video ---
-        if (propertyConfig.multimedia.videoUrl) {
+        const titleRecorrido = document.getElementById("title-recorrido");
+        const cardRecorrido = document.getElementById("card-recorrido");
+        if (propertyConfig.multimedia.videoUrl && propertyConfig.multimedia.videoUrl !== "") {
             const videoEl = document.getElementById("video-element");
             videoEl.src = propertyConfig.multimedia.videoUrl;
             if (propertyConfig.multimedia.videoThumbnail) {
                 videoEl.poster = propertyConfig.multimedia.videoThumbnail;
             }
+        } else {
+            if (titleRecorrido) titleRecorrido.style.display = 'none';
+            if (cardRecorrido) cardRecorrido.style.display = 'none';
         }
 
 
