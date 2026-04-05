@@ -387,12 +387,45 @@
         right: 15px;
       }
       .thumbnail-container {
-        overflow: hidden;
+        flex: 1;
+        overflow-x: auto;
+        overflow-y: hidden;
         cursor: grab;
         user-select: none;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+      .thumbnail-container::-webkit-scrollbar {
+        display: none;
       }
       .thumbnail-container.grabbing {
         cursor: grabbing;
+        scroll-behavior: auto;
+      }
+      .thumbnail-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .thumb-arrow {
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 30px;
+        height: 60%;
+        min-height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 2;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .thumb-arrow:hover {
+        background: rgba(0, 0, 0, 0.7);
       }
       .thumbnail-strip {
         display: flex;
@@ -765,8 +798,12 @@
         <button class="slider-arrow prev-arrow">❮</button>
         <button class="slider-arrow next-arrow">❯</button>
       </div>
-      <div class="thumbnail-container">
-        <div class="thumbnail-strip"></div>
+      <div class="thumbnail-wrapper">
+        <button class="thumb-arrow thumb-prev-btn" aria-label="Anterior Miniatura">❮</button>
+        <div class="thumbnail-container">
+          <div class="thumbnail-strip"></div>
+        </div>
+        <button class="thumb-arrow thumb-next-btn" aria-label="Siguiente Miniatura">❯</button>
       </div>
     </div>
 
@@ -936,6 +973,8 @@
         const thumbnailStrip = document.querySelector(".thumbnail-strip");
         const prevArrow = document.querySelector(".prev-arrow");
         const nextArrow = document.querySelector(".next-arrow");
+        const thumbPrevBtn = document.querySelector(".thumb-prev-btn");
+        const thumbNextBtn = document.querySelector(".thumb-next-btn");
 
         let currentSlide = 0, isDown = false, isDragging = false, startX, transformX;
 
@@ -967,6 +1006,9 @@
 
         nextArrow.addEventListener("click", () => showSlide(currentSlide + 1));
         prevArrow.addEventListener("click", () => showSlide(currentSlide - 1));
+
+        if (thumbPrevBtn) thumbPrevBtn.addEventListener("click", () => { thumbnailContainer.scrollBy({ left: -150, behavior: "smooth" }); });
+        if (thumbNextBtn) thumbNextBtn.addEventListener("click", () => { thumbnailContainer.scrollBy({ left: 150, behavior: "smooth" }); });
 
         const observer = new IntersectionObserver(
           (entries, self) => {

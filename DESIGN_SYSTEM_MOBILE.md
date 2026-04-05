@@ -1,5 +1,5 @@
 # 📱 Mobile Design System: "Warm Faux Glass"
-**Purpose:** Use this specification to instruct an AI to replicate the exact visual style of the "Edificio Teusaquillo" mobile property listing.
+**Purpose:** Use this specification to instruct an AI to replicate the exact visual style of the "Apartamento Nuevo con Terraza - Cedritos Ubik" mobile property listing.
 
 ## 1. Design Philosophy
 **Style Name:** "Warm Faux Glass" (Vidrio Cálido de Alto Rendimiento).
