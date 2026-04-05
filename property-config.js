@@ -38,6 +38,7 @@ const propertyConfig = {
     { name: "2 Hab. con Walk-in closets", emoji: "👗" },
     { name: "Cocina abierta americana", emoji: "🍳" },
     { name: "Zona social amplia", emoji: "🛋️" },
+    { name: "Baño social", emoji: "🚽" },
     { name: "Lavandería independiente", emoji: "🧺" },
     { name: "Depósito privado", emoji: "📦" },
     { name: "Hermosa vista al occidente de Bogotá", emoji: "🌆" }
