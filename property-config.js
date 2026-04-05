@@ -35,7 +35,7 @@ const propertyConfig = {
   // 4. Características Internas
   caracteristicasInternas: [
     { name: "3 Hab. con baño privado", emoji: "😍" },
-    { name: "2 Walk-in closets", emoji: "👗" },
+    { name: "2 Hab. con Walk-in closets", emoji: "👗" },
     { name: "Cocina abierta americana", emoji: "🍳" },
     { name: "Zona social amplia", emoji: "🛋️" },
     { name: "Lavandería independiente", emoji: "🧺" },
