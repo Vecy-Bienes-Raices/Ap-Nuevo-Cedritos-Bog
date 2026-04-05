@@ -39,7 +39,8 @@ const propertyConfig = {
     { name: "Cocina abierta americana", emoji: "🍳" },
     { name: "Zona social amplia", emoji: "🛋️" },
     { name: "Lavandería independiente", emoji: "🧺" },
-    { name: "Depósito privado", emoji: "📦" }
+    { name: "Depósito privado", emoji: "📦" },
+    { name: "Hermosa vista al occidente de Bogotá", emoji: "🌆" }
   ],
   destacadoInterno: "Disfruta de un oasis urbano con una terraza de 84 m² de uso exclusivo. Ideal para tus reuniones, zona de BBQ o simplemente para relajarte al aire libre con seguridad y tranquilidad.",
 
